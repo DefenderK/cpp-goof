@@ -23,7 +23,7 @@ jobs:
         run: |
           sudo npm install -g snyk
           sudo npm install -g snyk-delta
-          snyk auth ${SNYK_TOKEN}
+          snyk auth --auth-type=token ${SNYK_TOKEN}
           
       # Run Snyk OS (C++ with the --unmanaged option)
       - name: Run Snyk OS

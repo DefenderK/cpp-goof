@@ -28,5 +28,5 @@ jobs:
       # Run Snyk OS (C++ with the --unmanaged option)
       - name: Run Snyk OS
         run: |
-          snyk test --project-name="GH_ACTION_C++" --json --print-deps | snyk-delta --baselineOrg 6d36ac7a-c75b-4179-8e73-6dd4d3fc8343 --baselineProject 4a3c42f9-7797-49bd-8ca2-591daadb136d --setPassIfNoBaseline true
+          snyk test --project-name="GH_ACTION_C++" --unmanaged --json --print-deps | snyk-delta --baselineOrg 6d36ac7a-c75b-4179-8e73-6dd4d3fc8343 --baselineProject 4a3c42f9-7797-49bd-8ca2-591daadb136d --setPassIfNoBaseline true
         continue-on-error: true

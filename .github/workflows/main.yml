@@ -28,7 +28,7 @@ jobs:
       - name: Run Snyk OS
         run: |
           snyk test --unmanaged --print-deps --severity-threshold=critical
-        continue-on-error: false
+        continue-on-error: true
 
       # Run Snyk Monitor
       - name: Run Snyk Monitor

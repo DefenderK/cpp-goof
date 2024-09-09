@@ -27,5 +27,6 @@ jobs:
       # Run Snyk OS (C++ with the --unmanaged option)
       - name: Run Snyk OS
         run: |
-          snyk test --project-name="GH_ACTION_C++" --unmanaged --print-deps --severity-threshold=critical
-        continue-on-error: true
+          snyk test --unmanaged --print-deps --severity-threshold=critical
+          snyk monitor --project-name="GH_ACTION_C++" --unmanaged
+        continue-on-error: false

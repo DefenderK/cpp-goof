@@ -32,4 +32,5 @@ jobs:
 
       # Run Snyk Monitor
       - name: Run Snyk Monitor
-        run: snyk monitor --project-name="GH_ACTION_C++" --unmanaged
+        run: |
+          snyk monitor --project-name="GH_ACTION_C++" --org=6d36ac7a-c75b-4179-8e73-6dd4d3fc8343 --unmanaged
